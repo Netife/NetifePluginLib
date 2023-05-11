@@ -1,0 +1,25 @@
+{
+  "name":"NetifePluginLib",
+  "clsid":"2f81e161-7124-420e-9397-1db3cb969b0b",
+  "author":"EpicMo",
+  "version":"1.0.0",
+  "exportWay":"cpp",
+  "description":"本插件为 Netife 内置核心插件库，为其他插件提供依赖支持，请勿移除本插件。",
+  "coreRelative":"v1",
+  "exportCommand":"Netife.CppExport()",
+  "exportClassName":"NetifePluginLib",
+  "relativeChains":[],
+  "registerCommand":[
+    {
+      "class":"NetifePluginLib",
+      "command":"parserRawHtml [rawHtml]",
+      "description":"将 rawHtml 以人类可读的 JSON 方式返回"
+    }
+  ],
+  "registerHook":[
+    {
+      "node":"netife.network.receive",
+      "symbol":"LoadMe"
+    }
+  ]
+}
