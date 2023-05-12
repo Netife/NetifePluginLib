@@ -17,13 +17,28 @@
     },
     {
       "class":"NetifeBasicLib",
-      "command":"parserHexString [rawHtml] <targetType>",
-      "description":"将 HexString 以指定的格式返回。默认为转换成 String，targetType可为 'string'(字符串), 'binary'(二进制字符串)。"
+      "command":"parserHexString [content]",
+      "description":"将 HexString 转换为字符串"
     },
     {
       "class": "NetifeBasicLib",
-      "command": "downloadFileStream [UUID] <UUID_SUB>",
-      "description": "将指定 UUID 文件载体写入文件，并返回地址"
+      "command": "parserStringHex [content]",
+      "description": "将 String 转换为 HexString"
+    },
+    {
+      "class": "NetifeBasicLib",
+      "command": "writeHexFile [content]",
+      "description": "将 HexString 以文件方式写出，返回文件地址"
+    },
+    {
+      "class": "NetifeBasicLib",
+      "command": "generateUUID <content>",
+      "description": "生成UUID，如果提供Content将基于Content生成"
+    },
+    {
+      "class": "NetifeBasicLib",
+      "command": "getRawRequestByUUID [UUID] <UUID_SUB>",
+      "description": "根据指定 UUID 获取 RawRequest 信息"
     }
   ],
   "registerHook":[

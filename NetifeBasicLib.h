@@ -37,5 +37,15 @@ public:
     void OnExiting() override;
 
     std::string ParserRawHtml(const string &rawHtml);
+
+    std::string ParserHexString(std::string content);
+
+    std::string ParserStringHex(std::string content);
+
+    std::string WriteHexFile(std::string content);
+
+    std::string GenerateUUID(optional<std::string> content);
+
+    std::string GetRawRequestByUUID(std::string UUID, optional<std::string> uuid_sub);
 };
 #endif //NETIFEDEMOPLUGIN_DEMOCLASS_H
