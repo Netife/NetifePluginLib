@@ -11,9 +11,19 @@
   "relativeChains":[],
   "registerCommand":[
     {
-      "class":"NetifePluginLib",
+      "class":"NetifeBasicLib",
       "command":"parserRawHtml [rawHtml]",
       "description":"将 rawHtml 以人类可读的 JSON 方式返回"
+    },
+    {
+      "class":"NetifeBasicLib",
+      "command":"parserHexString [rawHtml] <targetType>",
+      "description":"将 HexString 以指定的格式返回。默认为转换成 String，targetType可为 'string'(字符串), 'binary'(二进制字符串)。"
+    },
+    {
+      "class": "NetifeBasicLib",
+      "command": "downloadFileStream [UUID] <UUID_SUB>",
+      "description": "将指定 UUID 文件载体写入文件，并返回地址"
     }
   ],
   "registerHook":[
